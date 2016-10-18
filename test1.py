@@ -19,9 +19,6 @@ random_greeting = random.choice(greetings)
 hairColour = ['Thats cool', 'That colour is fine', 'Look at you', 'sounds intersting']
 random_hair = random.choice(hairColour)
 
-
-
-
 nameQuestion = raw_input("What is your name ?")
 wordList = nameQuestion.split(" ")
 for word in wordList:
