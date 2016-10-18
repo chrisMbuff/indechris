@@ -1,5 +1,7 @@
 import random
 
+flip = False
+
 text_file = open("stopWord.txt", "r")
 stopwords = text_file.read().split('\n')
 stopwords.append("name")
@@ -23,19 +25,21 @@ nameQuestion = raw_input("What is your name ?")
 wordList = nameQuestion.split(" ")
 for word in wordList:
     if word.lower() not in stopwords:
-        print (random_greeting + word)
-   
-        
-name = word        
+        print (random_greeting + word)          
+name = word
+
 feelingQuestion = raw_input ('How are you feeling today? ')
 
 feelingWord = feelingQuestion.split(" ")
 for word in feelingWord:
-    if word.lower() == not:flip = True
+    if word.lower() == "not": flip = True
     elif word in happyWordsfile: emotion = "good"
-    elif word in sadWordsfile; emotion = "bad"
+    elif word in sadWordsfile: emotion = "bad"
     
-if flip and emotion ==
+if flip and emotion == "good": print ("Oh dear, sound like you need a beer!")
+if not flip and emotion == "good": print ("Thats really good " + name)
+if flip and emotion == "bad": print ("Thats really good " + name)
+if not flip and emotion == "bad": print ("Oh dear, sound like you need a beer!")
         
 yourColour = raw_input("What is your hair colour ?")
 print(random_hair)
