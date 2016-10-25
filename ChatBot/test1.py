@@ -1,4 +1,5 @@
 import random
+import wikipedia
 
 flip = False
 
@@ -44,3 +45,12 @@ if not flip and emotion == "bad": print ("Oh dear, sound like you need a beer!")
 yourColour = raw_input("What is your hair colour ?")
 print(random_hair)
 
+while True:
+    search = raw_input("Want  to find some information about any subject>>")
+    search_words = search.split(" ")
+    for word in search_words:
+        if (word not in stopwords) and (len(word.strip()) > 0):
+            print("Just about to search for " + word)
+            results = wikipedia.search(word)
+            print(wikipedia.summary(results[0], sentences=1))
+           
